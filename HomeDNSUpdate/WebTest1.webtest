@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="WebTest1" Id="fd1c8e82-3605-4a9c-8e60-270c27980a53" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="WebTest2.23b8d0b6-e082-4079-992c-00cbe3a1ebcf.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="d7cbb075-9a89-499a-9262-0717d0789800" Version="1.1" Url="{{WebServer1}}/default.asp" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="{{WebServer1}}/join/index.bml?AffID=1" ReportingName="" IgnoreHttpStatusCode="False">
+      <QueryStringParameters>
+        <QueryStringParameter Name="refid" Value="100" RecordedValue="100" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="88a281a0-57fc-4981-b9c2-bf102ec3e1d9" Version="1.1" Url="{{WebServer1}}/" ThinkTime="9" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="iso-8859-1" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{WebServer1}}/join/index.bml?AffID=1" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.Log In" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="Log In" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="9e05e853-5811-41b7-a40f-e04235c96697" Version="1.1" Url="{{WebServer2}}/secureLogin" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="iso-8859-1" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{WebServer1}}/" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="destination" Value="{{$HIDDEN1.destination}}" RecordedValue="/controlpanel/" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="credential_0" Value="mklump" RecordedValue="mklump" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="credential_1" Value="mjk8618+=!" RecordedValue="mjk8618+=!" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Log In" Value="Log In" RecordedValue="Log In" CorrelationBinding="{{FormPostParam1.Log In}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="4bc8b770-7010-4416-9767-c984ab2eb2ef" Version="1.1" Url="{{WebServer2}}/controlpanel/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="Windows-1252" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://www.webhost4life.com/controlpanel/beta/" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="a1eba309-df65-4cb1-94af-e0b338d55a14" Version="1.1" Url="{{WebServer1}}/generalAppC/scriptcat/6b3282df631c62b8766798834a5232db.1" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{WebServer1}}/controlpanel/beta/" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="a70a2c60-8acd-4c10-b6b4-68ccccf2d90c" Version="1.1" Url="{{WebServer3}}/api/dataset/vDeckTest/siteConfig" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{WebServer1}}/controlpanel/beta/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="_ak" Value="eig" RecordedValue="eig" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="callback" Value="getSiteConfigCallback" RecordedValue="getSiteConfigCallback" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="5c5a547d-9820-4c39-ad55-a4ab203e22ff" Version="1.1" Url="{{WebServer3}}/twreceiver" ThinkTime="8" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{WebServer1}}/controlpanel/beta/" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="_callback" Value="jQuery180031273270507901246_1377214002802" RecordedValue="jQuery180031273270507901246_1377214002802" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="_ak" Value="eig" RecordedValue="eig" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="_ds" Value="vDeckTest" RecordedValue="vDeckTest" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="_r" Value="298405" RecordedValue="298405" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="_clientTS" Value="1377214003038" RecordedValue="1377214003038" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="company" Value="WebHost4Life" RecordedValue="WebHost4Life" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="userId" Value="mklump" RecordedValue="mklump" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="action" Value="Customer+Login" RecordedValue="Customer+Login" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="url" Value="{{WebServer4}}%2Fcontrolpanel%2Fbeta%2F" RecordedValue="http%3A%2F%2Fwww.webhost4life.com%2Fcontrolpanel%2Fbeta%2F" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="title" Value="Control+Panel" RecordedValue="Control+Panel" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="_" Value="1377214003039" RecordedValue="1377214003039" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.recent" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;},{&quot;" />
+            <RuleParameter Name="Index" Value="24" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="fb4e5a45-611c-48a3-a7e4-28fb3e336df2" Version="1.1" Url="{{WebServer1}}/controlpanel/my_favorites/update_favorites.cmp" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="{{WebServer1}}/controlpanel/beta/" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="async" Value="false" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="recent" Value=" DomainCentral|SEP|/controlpanel/domaincentral/" RecordedValue=" DomainCentral|SEP|/controlpanel/domaincentral/" CorrelationBinding="{{FormPostParam2.recent}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="decc2eac-9fe5-4fba-9082-fd04ed1e4f1a" Version="1.1" Url="{{WebServer1}}/controlpanel/domaincentral/" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="iso-8859-1" ExpectedHttpStatusCode="0" ExpectedResponseUrl="{{WebServer1}}/controlpanel/domaincentral/beta/index.bml" ReportingName="" IgnoreHttpStatusCode="False">
+      <DependentRequests>
+        <Request Method="GET" Guid="ad17a0a1-a824-445c-80af-8126fc861ff7" Version="1.1" Url="{{WebServer3}}/api/dataset/vDeckTest/siteConfig" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{WebServer1}}/controlpanel/domaincentral/beta/index.bml" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="_ak" Value="eig" RecordedValue="eig" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="callback" Value="getSiteConfigCallback" RecordedValue="getSiteConfigCallback" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="749cd1cf-e64a-46db-a175-781728ed990f" Version="1.1" Url="{{WebServer3}}/twreceiver" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="{{WebServer1}}/controlpanel/domaincentral/beta/index.bml" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="_callback" Value="jQuery18008413337149859136_1377214015127" RecordedValue="jQuery18008413337149859136_1377214015127" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="_ak" Value="eig" RecordedValue="eig" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="_ds" Value="vDeckTest" RecordedValue="vDeckTest" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="_r" Value="483762" RecordedValue="483762" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="_clientTS" Value="1377214015356" RecordedValue="1377214015356" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="urlref" Value="{{WebServer4}}%2Fcontrolpanel%2Fbeta%2F" RecordedValue="http%3A%2F%2Fwww.webhost4life.com%2Fcontrolpanel%2Fbeta%2F" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="company" Value="WebHost4Life" RecordedValue="WebHost4Life" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="userId" Value="mklump" RecordedValue="mklump" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="action" Value="Purchase+Domains+from+DomainCentral" RecordedValue="Purchase+Domains+from+DomainCentral" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="url" Value="{{WebServer4}}%2Fcontrolpanel%2Fdomaincentral%2Fbeta%2Findex.bml" RecordedValue="http%3A%2F%2Fwww.webhost4life.com%2Fcontrolpanel%2Fdomaincentral%2Fbeta%2Findex.bml" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="title" Value="DomainCentral" RecordedValue="DomainCentral" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="_" Value="1377214015357" RecordedValue="1377214015357" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </DependentRequests>
+      <Headers>
+        <Header Name="Referer" Value="{{WebServer1}}/controlpanel/beta/" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.1" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;&lt;sp" />
+            <RuleParameter Name="Index" Value="11" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam4.1" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;&lt;sp" />
+            <RuleParameter Name="Index" Value="11" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam5.domain" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="e([ &quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; ]);" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="0f668758-a8fa-461e-9da0-279e99f8e897" Version="1.1" Url="{{WebServer1}}/controlpanel/domaincentral/beta/overview.cmp" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{WebServer1}}/controlpanel/domaincentral/beta/index.bml" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="domain" Value="klump-pdx.com" RecordedValue="klump-pdx.com" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="amp;section" Value="overview" RecordedValue="overview" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="amp;inreg" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="" Value="amp;undefined" RecordedValue="amp;undefined" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="1" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam3.1}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="4d37a71e-74cb-47cb-9e51-9cb1acf60ddd" Version="1.1" Url="{{WebServer1}}/controlpanel/domaincentral/beta/dns.cmp" ThinkTime="12" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{WebServer1}}/controlpanel/domaincentral/beta/index.bml" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="domain" Value="klump-pdx.com" RecordedValue="klump-pdx.com" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="amp;section" Value="dns" RecordedValue="dns" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="amp;inreg" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="" Value="amp;undefined" RecordedValue="amp;undefined" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="1" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam4.1}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="fcd67f51-9fc2-4eb4-bedd-bedd7712440d" Version="1.1" Url="{{WebServer1}}/controlpanel/domaincentral/beta/m.cmp" ThinkTime="10" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="{{WebServer1}}/controlpanel/domaincentral/beta/index.bml" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="cmd" Value="dns" RecordedValue="dns" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="domain" Value="klump-pdx.com" RecordedValue="klump-pdx.com" CorrelationBinding="{{FormPostParam5.domain}}" UrlEncode="True" />
+        <FormPostParameter Name="params" Value=";count=9;action=editA;id3=199459390;name3=mx;content3=66.96.142.50;id4=199459388;name4=mx;content4=66.96.142.51;id5=199459387;name5=webmail;content5=66.96.146.20;id6=199459389;name6=email;content6=66.96.146.20;id7=199459385;name7=*;content7=66.96.146.85;id8=199459384;name8=klump-pdx.com;content8=66.96.146.85;id9=600135075;name9=home;content9=127.0.0.1;" RecordedValue=";count=9;action=editA;id3=199459390;name3=mx;content3=66.96.142.50;id4=199459388;name4=mx;content4=66.96.142.51;id5=199459387;name5=webmail;content5=66.96.146.20;id6=199459389;name6=email;content6=66.96.146.20;id7=199459385;name7=*;content7=66.96.146.85;id8=199459384;name8=klump-pdx.com;content8=66.96.146.85;id9=600135075;name9=home;content9=71.59.164.189;" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="1f3d8095-12ed-4388-ad0b-6d85cca8f35a" Version="1.1" Url="{{WebServer1}}/utils/logout.bml" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="iso-8859-1" ExpectedHttpStatusCode="0" ExpectedResponseUrl="{{WebServer1}}/logout.bml?" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{WebServer1}}/controlpanel/domaincentral/beta/index.bml" />
+      </Headers>
+    </Request>
+  </Items>
+  <ContextParameters>
+    <ContextParameter Name="WebServer1" Value="http://www.webhost4life.com" />
+    <ContextParameter Name="WebServer2" Value="https://secure.webhost4life.com" />
+    <ContextParameter Name="WebServer3" Value="http://eig.evergage.com" />
+    <ContextParameter Name="WebServer4" Value="http%3A%2F%2Fwww.webhost4life.com" />
+  </ContextParameters>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

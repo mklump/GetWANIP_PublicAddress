@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetWANIP", "GetWANIP.csproj", "{033C52F3-94AD-4276-B253-5114279E7E98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeDNSUpdate", "..\HomeDNSUpdate\HomeDNSUpdate.csproj", "{DF625C89-4AE1-47C5-9283-DDD2E77586D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E21B4FD0-40EA-47F8-BF40-0904AE9E42A8}"
+	ProjectSection(SolutionItems) = preProject
+		GetWANIP.vsmdi = GetWANIP.vsmdi
+		TestSettings1.testsettings = TestSettings1.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = GetWANIP.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{033C52F3-94AD-4276-B253-5114279E7E98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{033C52F3-94AD-4276-B253-5114279E7E98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{033C52F3-94AD-4276-B253-5114279E7E98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{033C52F3-94AD-4276-B253-5114279E7E98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF625C89-4AE1-47C5-9283-DDD2E77586D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF625C89-4AE1-47C5-9283-DDD2E77586D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF625C89-4AE1-47C5-9283-DDD2E77586D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF625C89-4AE1-47C5-9283-DDD2E77586D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
